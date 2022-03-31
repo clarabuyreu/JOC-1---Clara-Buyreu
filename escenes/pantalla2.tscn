@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://terres.tscn" type="PackedScene" id=1]
 [ext_resource path="res://terres verticals.tscn" type="PackedScene" id=2]
 [ext_resource path="res://personatge.tscn" type="PackedScene" id=3]
+[ext_resource path="res://pinxos.tscn" type="PackedScene" id=4]
+[ext_resource path="res://portal1.tscn" type="PackedScene" id=5]
+[ext_resource path="res://escenes/cloud2.png" type="Texture" id=6]
 
 [node name="Node2D" type="Node2D"]
 
@@ -11,18 +14,32 @@ position = Vector2( 34, 285 )
 scale = Vector2( 0.4, 0.4 )
 
 [node name="StaticBody2D2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 146, 326 )
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( 172, 416 )
+scale = Vector2( 0.2, 0.4 )
 
 [node name="StaticBody2D4" parent="." instance=ExtResource( 2 )]
-position = Vector2( 414, 304 )
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( 523, 385 )
+scale = Vector2( 0.2, 0.4 )
 
 [node name="StaticBody2D3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 278, 289 )
-scale = Vector2( 0.4, 0.4 )
+position = Vector2( 329, 279 )
+scale = Vector2( 0.15, 0.4 )
 
 [node name="StaticBody2D5" parent="." instance=ExtResource( 1 )]
-position = Vector2( 565, 196 )
+position = Vector2( 759, 174 )
 
-[node name="KinematicBody2D" parent="." instance=ExtResource( 3 )]
+[node name="Jugador" parent="." instance=ExtResource( 3 )]
+
+[node name="Area2D" parent="." instance=ExtResource( 4 )]
+position = Vector2( 493, 745 )
+scale = Vector2( 3.5, 0.5 )
+
+[node name="Area2D2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 830, 100 )
+
+[node name="Cloud2" type="Sprite" parent="."]
+position = Vector2( 472, 70 )
+texture = ExtResource( 6 )
+
+[connection signal="body_entered" from="Area2D" to="Jugador" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="Jugador" method="_on_Final2_body_entered"]

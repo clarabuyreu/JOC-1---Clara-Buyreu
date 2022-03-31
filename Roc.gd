@@ -1,7 +1,7 @@
 extends Area2D
 
 var velocitat = Vector2.ZERO
-var gravetat  = Vector2.DOWN * 250
+var gravetat  = Vector2.DOWN * 100
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

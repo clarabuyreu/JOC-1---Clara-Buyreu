@@ -58,4 +58,10 @@ func _on_RigidBody2D2_body_entered(body):
 
 
 func _on_Final_body_entered(body):
+	print("Ja vas per la meitat del camí!")
 	get_tree().change_scene("res://escenes/pantalla2.tscn")
+
+
+func _on_Final2_body_entered(body):
+	print("Ho has aconseguit")
+	get_tree().change_scene("res://final.tscn")

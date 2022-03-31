@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/67c3ec9c225b9ef3a2ff256dd2480567-38-sentimientos-de-tarjeta-de-notebookscript-31.png-bdbfc962fabd53dff94fd0e8fe244b0d.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://escenes/67c3ec9c225b9ef3a2ff256dd2480567-38-sentimientos-de-tarjeta-de-notebookscript-31.png"
+dest_files=[ "res://.import/67c3ec9c225b9ef3a2ff256dd2480567-38-sentimientos-de-tarjeta-de-notebookscript-31.png-bdbfc962fabd53dff94fd0e8fe244b0d.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

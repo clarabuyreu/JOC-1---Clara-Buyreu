@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://escenes/67c3ec9c225b9ef3a2ff256dd2480567-38-sentimientos-de-tarjeta-de-notebookscript-31.png" type="Texture" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="67C3Ec9C225B9Ef3A2Ff256Dd2480567-38-sentimientos-de-tarjeta-de-notebookscript-31" type="Sprite" parent="."]
+position = Vector2( 503, 321 )
+scale = Vector2( 1.64746, 1.25781 )
+texture = ExtResource( 1 )

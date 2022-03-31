@@ -1,21 +1,27 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://pinxos.tscn" type="PackedScene" id=1]
 [ext_resource path="res://portal1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://terres.tscn" type="PackedScene" id=3]
 [ext_resource path="res://personatge.tscn" type="PackedScene" id=4]
 [ext_resource path="res://RigidBody2D.tscn" type="PackedScene" id=5]
+[ext_resource path="res://escenes/cloud2.png" type="Texture" id=6]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Jugador" parent="." instance=ExtResource( 4 )]
 position = Vector2( 160, 332 )
-collision_layer = 2
+collision_layer = 3
+collision_mask = 3
 
 [node name="Camera2D" type="Camera2D" parent="Jugador"]
 current = true
 
 [node name="Punxes" type="Node2D" parent="."]
+
+[node name="Area2D3" parent="Punxes" instance=ExtResource( 1 )]
+position = Vector2( 368, 541 )
+scale = Vector2( 0.5, 0.5 )
 
 [node name="Area2D2" parent="Punxes" instance=ExtResource( 1 )]
 position = Vector2( 368, 541 )
@@ -30,10 +36,10 @@ collision_mask = 2
 [node name="Roques" type="Node2D" parent="."]
 
 [node name="RigidBody2D" parent="Roques" instance=ExtResource( 5 )]
-position = Vector2( 323, 118 )
+position = Vector2( 327, 199 )
 
 [node name="RigidBody2D3" parent="Roques" instance=ExtResource( 5 )]
-position = Vector2( 1068, -823 )
+position = Vector2( 1065, -1201 )
 
 [node name="RigidBody2D2" parent="Roques" instance=ExtResource( 5 )]
 position = Vector2( 739, -552 )
@@ -54,7 +60,12 @@ position = Vector2( 1140, 438 )
 
 [node name="Area2D" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1209, 377 )
-collision_layer = 2
+collision_layer = 3
+collision_mask = 3
+
+[node name="Cloud2" type="Sprite" parent="."]
+position = Vector2( 874, 126 )
+texture = ExtResource( 6 )
 
 [connection signal="body_entered" from="Punxes/Area2D2" to="Jugador" method="_on_Area2D2_body_entered"]
 [connection signal="body_entered" from="Punxes/Area2D" to="Jugador" method="_on_Area2D_body_entered"]
